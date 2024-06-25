@@ -1,0 +1,38 @@
+
+<html>
+
+<head></head>
+<body>
+<!-- irm https://christitus.com/win|iex -->
+<center>
+
+<h1 onmouseout="Change1()">Events In JavaScriprt</h1><br>
+<h1 onmouseover="Change2()">Events In JavaScriprt</h1><br>
+<button onclick="show()">SHOW MY NAME</button><br>
+
+<button ondblclick="display()">DATE AND TIME</button><br>
+<input onfocus="Change3()">
+<script>
+	function show(){
+	document.write("<h1>My Name Is Pranav</h1>");
+	}
+	function display(){
+	var date=Date()
+	document.write("<h1>Current Date And Time:"+date+"</h1>");
+	}
+	function Change1(){
+	
+	document.write("<h1>Content changed:</h1>");
+	}
+	function Change2(){
+	
+	document.write("<h1>Content changed:...............</h1>");
+	}
+	function Change3(){
+	
+	document.write("<h1>Content changed:......```````.........</h1>");
+	}
+</script>
+</center>
+</body>
+</html>

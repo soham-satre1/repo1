@@ -1,0 +1,57 @@
+body {
+  margin: 0;
+ 
+	color:white;
+	background:grey;
+	opacity:0.6;
+	text-aligh:center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root1{
+	   animation-name: example;
+ 	 animation-duration: 2s;
+	animation-iteration-count:infinite;
+	}
+	@keyframes example {
+  	from {background-color: red;}
+	  to {background-color: blue;}
+}
+form {
+        max-width: 400px;
+        margin: auto;
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+	color:blue;
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="email"], textarea, select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-size: 16px;
+    }
+    input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+    }
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }	
