@@ -1,0 +1,50 @@
+<html>
+<head>
+	<style>
+	.container {
+  	text-align: center;
+  	color: red;
+	border-style: solid ;
+	boder-width: 5px;
+	}
+	</style>
+    <script>
+function validation() {
+    var pwd1 = document.getElementById("x").value;
+    var pwd2 = document.getElementById("y").value;
+    
+    if (pwd1 === pwd2) {
+        if (pwd1.length >= 8 && pwd1.length <= 15) {
+           
+            
+            if (pwd1=="[0-9a-zA-Z@#_-]") {
+                alert("Password is valid!");
+                
+            } else {
+                alert("Password must contain at least one special character, one uppercase letter, and one lowercase letter.");
+            }
+        } else {
+            alert("Password must be between 8 and 15 characters long.");
+        }
+    } else {
+        alert("Sorry! Passwords do not match.");
+    }
+}
+
+ 
+         
+           
+    </script>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <label for="x">Password</label>
+            <input type="password" id="x" placeholder=""><br><br>
+            <label for="y">Confirm Password</label>
+            <input type="password" id="y" placeholder=""><br><br>
+            <input onclick="validation()" type="submit" value="Submit">
+        </div>
+    </center>
+</body>
+</html>
