@@ -1,0 +1,89 @@
+<html>
+</head>
+<style>
+/* Style all input fields */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* Style the submit button */
+input[type="submit"] {
+    background-color: #04AA6D;
+    color: white;
+}
+
+/* Style the container for inputs */
+.container {
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+/* The message box is shown when the user clicks on the password field */
+#message {
+    display: none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+/* Add a green text color and a checkmark when the requirements are met */
+.valid {
+    color: green;
+}
+
+/* Add a red text color and an "x" icon when the requirements are not met */
+.invalid {
+    color: red;
+}
+
+</style>
+</head>
+<body>
+<div class="container">
+    <form action="/action_page.php">
+        <label for="usrname">Username</label>
+        <input type="text" id="usrname" name="usrname" required>
+        <label for="psw">Password</label>
+        <input type="password" id="psw" name="psw"
+               pattern="(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{5,15}"
+               title="Must contain at least one number, one uppercase and lowercase letter, and at least 5-15 characters"
+               required>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+	<script>
+	var myInput = document.getElementById("psw");
+var letter = document.getElementById("letter");
+var capital = document.getElementById("capital");
+var number = document.getElementById("number");
+var length = document.getElementById("length");
+
+// Show the message box when the user clicks on the password field
+myInput.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+};
+
+// Hide the message box when the user clicks outside of the password field
+myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+};
+
+// Validate lowercase letters
+var lowerCaseLetters = /[a-z]/g;
+if (myInput.value.match(lowerCaseLetters)) {
+    // Update the UI to show valid lowercase letters
+    // You can do similar checks for uppercase letters, numbers, and length
+}
+
+	</script>
+</body>
+</html>
