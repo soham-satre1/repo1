@@ -1,0 +1,6 @@
+ create table student(
+  2  std_rollno integer,
+  3  std_name varchar(10),
+  4  std_course varchar(10),
+  5  std_age integer
+  6  );
