@@ -10,12 +10,12 @@ var con=mysql.createConnection(
 
 con.connect(
     function (err){
-	if (err) throw err;
-                else
+	//if (err) throw err;
+              //  else
 	console.log("Connected");
 	con.query("Create Database SGM");
-                if (err) throw err;
-                else
+               // if (err) throw err;
+            //    else
 	console.log("Database Created...");
 }
 	)
